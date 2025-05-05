@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es2016", // Cílová verze JavaScriptu (můžeš dát i novější, např. es2018, es2020, esnext)
+      "module": "commonjs", // Jak se mají moduly zpracovávat. Pro tvůj setup bez "type": "module" je commonjs správně.
+      "strict": true, // Zapíná sadu přísných kontrol typů (dobré pro zabránění chybám)
+      "esModuleInterop": true, // Umožňuje lepší interoperabilitu mezi CommonJS (require) a ES Moduly (import)
+      "skipLibCheck": true, // Přeskočí kontrolu typů v knihovnách v node_modules (urychlí kompilaci)
+      "forceConsistentCasingInFileNames": true // Zajistí, že příkazy import/require používají správnou velikost písmen v názvech souborů
+      // "outDir": "./dist", // Volitelné: Pokud bys někdy kompiloval TS na JS (npm run build), určí to výstupní složku
+    },
+    "include": [
+      "**/*.ts" // Určuje, že kompilátor má zpracovávat všechny soubory s příponou .ts kdekoli v projektu
+    ]
+  }
