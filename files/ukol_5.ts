@@ -7,6 +7,7 @@ let x = 0;
 
 const visited: string[] = ['0,0'];
 
+let atLeastOneVisited = 1;
 
 for (const i of path) {
     if (i === "^") {
@@ -20,13 +21,10 @@ for (const i of path) {
     }
     const position = `${x},${y}`;
 
-    if (!(position in visited)) {
+    if (!(visited.includes(position))) {
         visited.push(position);
+        atLeastOneVisited ++;
     }
 }
 
-
-const atLeastOneVisited = console.log(visited.length);
-
-console.log(visited);
 console.log(atLeastOneVisited);
